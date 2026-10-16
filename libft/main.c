@@ -1,8 +1,11 @@
 #include "libft.h"
+#include <stdio.h>
 
-int main()
+
+int	main()
 {
-    printf("ft_isdigit : %d\n", ft_isdigit('3'));
-    printf("ft_isalpha : %d\n", ft_isalpha('3'));
+    int	x = 0;
+	ft_memset(&x, 1, 2);
+	printf("Value is : %d\n", x);
     return (0);
 }

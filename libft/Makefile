@@ -6,7 +6,8 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar
 ARFLAGS = rcs
 
-SRCS = ft_isalpha.c ft_isdigit.c
+SRCS = 	ft_isalpha.c ft_isdigit.c ft_isalphanum.c ft_isascii.c \
+		ft_isprint.c ft_strlen.c ft_memset.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
@@ -23,6 +24,4 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 
-re : fclean all
-
-.PHONY : all clean fclean re
+re: fclean all

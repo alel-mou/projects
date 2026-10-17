@@ -1,9 +1,11 @@
 #include <stdio.h>
-void *memset(void *s, int c, size_t n);
+#include <string.h>
+
 int	main()
 {
-	int	x;
-	memset(&x, 1, 2);
-	printf("x : %d\n", x);
+	char	dest[] = "hello";
+	char	src[] = "nice";
+	memcpy(dest, src, 4);
+	printf("dest : %s\n",dest);
 	return (0);
 }

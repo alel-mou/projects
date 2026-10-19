@@ -4,11 +4,9 @@
 
 int	main()
 {
-	char	s1[6] = "ABCDE";
-	ft_memmove(s1, s1 + 1, 4);
-	printf("first : %s\n", s1);
-	char	s2[6] = "ABCDE";
-	ft_memmove(s2 + 1, s2, 4);
-	printf("second : %s\n", s2);
+	char	dst[100] = "hello";
+	char	*src = "alaa";
+	size_t	ret = ft_strlcat(dst, src, 9);
+	printf("ret : %zu string : %s\n", ret, dst);
     return (0);
 }

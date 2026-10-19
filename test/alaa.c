@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
+extern int	counter;
+
 int	main()
 {
-	char	dest[] = "hello";
-	char	src[] = "nice";
-	memcpy(dest, src, 4);
-	printf("dest : %s\n",dest);
+	printf("%d\n",counter);
 	return (0);
 }

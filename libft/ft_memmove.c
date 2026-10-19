@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alel-mou <alel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/19 13:36:18 by alel-mou          #+#    #+#             */
-/*   Updated: 2026/10/19 14:40:44 by alel-mou         ###   ########.fr       */
+/*   Created: 2026/10/19 18:48:39 by alel-mou          #+#    #+#             */
+/*   Updated: 2026/10/19 18:51:11 by alel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char		*d;
-	const char 	*s;
+	const char	*s;
 	size_t		i;
 
 	d = dest;
@@ -31,13 +31,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		i = n - 1;
+		i = n;
 		while (i > 0)
 		{
-			d[i] = s[i];
 			i--;
+			d[i] = s[i];
 		}
-		d[0] = s[0];
 	}
 	return (dest);
 }

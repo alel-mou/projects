@@ -1,11 +1,10 @@
 #include "libft.h"
 #include <stdio.h>
-#include <string.h>
+#include <bsd/string.h>
 #include <ctype.h>
 
 int	main()
 {
-	int	x = 256;
-	printf("%zu\n",ft_strlen((unsigned char *) &x));
+	printf("%zu\n", ft_strlcpy(NULL, "hello", 0));
     return (0);
 }

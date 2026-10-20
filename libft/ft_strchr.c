@@ -6,7 +6,7 @@
 /*   By: alel-mou <alel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 23:03:14 by alel-mou          #+#    #+#             */
-/*   Updated: 2026/10/20 00:01:51 by alel-mou         ###   ########.fr       */
+/*   Updated: 2026/10/20 12:38:52 by alel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	unsigned char	*p;
 
 	len = ft_strlen(s);
-	if ((unsigned char)c == 0)
+	if ((unsigned char)c == '\0')
 		return ((char *)&s[len]);
 	p = (unsigned char *)s;
 	while (*p)

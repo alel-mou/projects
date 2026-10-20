@@ -5,6 +5,6 @@
 
 int	main()
 {
-	printf("%zu\n", ft_strlcpy(NULL, "hello", 0));
-    return (0);
+	size_t	n = ft_strlcat(NULL, NULL, 0);
+	return (0);
 }

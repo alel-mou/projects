@@ -1,10 +1,10 @@
 #include "libft.h"
 #include <stdio.h>
-#include <bsd/string.h>
 #include <ctype.h>
-
+#include <string.h>
 int	main()
 {
-	size_t	n = ft_strlcat(NULL, NULL, 0);
+	char	*s1 = NULL;
+	printf("%s\n",(char *)ft_memchr(s1, 'l', 0));
 	return (0);
 }

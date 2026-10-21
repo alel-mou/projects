@@ -6,7 +6,7 @@
 /*   By: alel-mou <alel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 19:21:40 by alel-mou          #+#    #+#             */
-/*   Updated: 2026/10/20 01:17:05 by alel-mou         ###   ########.fr       */
+/*   Updated: 2026/10/21 13:11:16 by alel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*p;
 	size_t			i;
-	
+
 	p = s;
 	i = 0;
 	while (i < n)

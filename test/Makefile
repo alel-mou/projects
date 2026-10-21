@@ -1,7 +1,4 @@
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
+file1.txt : file2.txt
+	echo -n "hello" >> file1.txt
 
-SRCS = alaa.c alaa1.c
-
-prog : $(SRCS)
-	$(CC) $(SRCS) -o prog
+.PHONY: file1.txt

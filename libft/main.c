@@ -4,7 +4,6 @@
 #include <string.h>
 int	main()
 {
-	char	*s1 = NULL;
-	printf("%s\n",(char *)ft_memchr(s1, 'l', 0));
+	printf("%s\n",ft_strnstr(NULL,"ell" , 0));
 	return (0);
 }

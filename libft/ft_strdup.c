@@ -6,7 +6,7 @@
 /*   By: alel-mou <alel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 20:25:08 by alel-mou          #+#    #+#             */
-/*   Updated: 2026/10/22 20:33:04 by alel-mou         ###   ########.fr       */
+/*   Updated: 2026/10/22 20:34:32 by alel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s)
 	size_t	len;
 	size_t	i;
 	char	*p;
-	
+
 	if (!s)
 		return (NULL);
 	len = ft_strlen(s);

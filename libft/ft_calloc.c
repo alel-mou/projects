@@ -6,7 +6,7 @@
 /*   By: alel-mou <alel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 19:22:14 by alel-mou          #+#    #+#             */
-/*   Updated: 2026/10/22 20:12:47 by alel-mou         ###   ########.fr       */
+/*   Updated: 2026/10/22 20:35:18 by alel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t nmem, size_t size)
 	void	*p;
 	char	*pc;
 	size_t	i;
-	
+
 	if (size != 0 && nmem > (size_t)-1 / size)
 		return (NULL);
 	p = malloc(nmem * size);

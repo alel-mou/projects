@@ -6,7 +6,7 @@
 /*   By: alel-mou <alel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 17:12:08 by alel-mou          #+#    #+#             */
-/*   Updated: 2026/10/21 19:10:13 by alel-mou         ###   ########.fr       */
+/*   Updated: 2026/10/22 22:49:09 by alel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	const unsigned char	*p2;
 	size_t				i;
 
-	if (n == 0)
+	if (n == 0 || s1 == s2)
 		return (0);
 	p1 = s1;
 	p2 = s2;

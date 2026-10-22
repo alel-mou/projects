@@ -7,7 +7,10 @@
 
 int	main()
 {
-	char	*s = ft_strdup("hello");
-	printf("%s\n", s);
+	char *a = "hello";
+	char *b = "hello";
+	printf("address 1 : %p\n", a);
+	printf("address 2 : %p\n", b);
+	printf("%d\n", ft_memcmp(a, b, -1));
 	return (0);
 }

@@ -17,7 +17,7 @@ static int	ft_isincharset(char const *set, char c)
 	size_t	i;
 
 	i = 0;
-	while (i < ft_strlen(set))
+	while (set[i])
 	{
 		if (set[i] == c)
 			return (1);
@@ -26,18 +26,58 @@ static int	ft_isincharset(char const *set, char c)
 	return (0);
 }
 
-static int	ft_total(char const *s1, char const *set)
+static	char	*ft_handle(char const *s1)
 {
-	size_t	total;
+	char	*p;
 	size_t	i;
 
-	total = 0;
+	if (!s1)
+		return (NULL);
+	p = malloc((ft_strlen(s1) + 1) * sizeof(char));
+	if (!p)
+		return (NULL);
 	i = 0;
-	while (i < ft_strlen(s1))
+	while (s1[i])
 	{
-		if (!ft_isincharset(set, s1[i]))
-			total++;
+		p[i] = s1[i];
 		i++;
 	}
-	return (total);
+	return (p);
+}
+
+static	void	ft_detect(char const *s1, char const *set, size_t *s, size_t *e)
+{
+	*s = 0;
+	while (ft_isincharset(set, s1[*s]))
+		++*s;
+	*e = ft_strlen(s1) - 1;
+	while (ft_isincharset(set, s1[*e]))
+		--*e;
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	start;
+	size_t	end;
+	size_t	i;
+	size_t	n;
+	char	*p;
+
+	if (!s1 || !set)
+	{
+		return (ft_handle(s1));
+	}
+	ft_detect(s1, set, &start, &end);
+	p = malloc((end - start + 2) * sizeof(char));
+	if (!p)
+		return (NULL);
+	n = end - start + 1;
+	i = 0;
+	while (i < n)
+	{
+		p[i] = s1[start];
+		i++;
+		start++;
+	}
+	return (p);
 }

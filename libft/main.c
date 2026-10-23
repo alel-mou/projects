@@ -7,7 +7,7 @@
 
 int	main()
 {
-	char	*s = ft_strjoin("12", "23");
+	char	*s = ft_strtrim(NULL, "sdfdsf");
 	if (!s)
 		printf("NULL\n");
 	else

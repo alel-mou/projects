@@ -7,10 +7,15 @@
 
 int	main()
 {
-	char	*s = ft_strtrim(NULL, "sdfdsf");
-	if (!s)
-		printf("NULL\n");
-	else
-		printf("%s\n", s);
+	char	**p = ft_split(",\0", ',');
+	char	**tmp = p;
+	while (*tmp)
+	{
+		if (!*tmp)
+			printf("NULL");
+		else
+			printf("%s\n", *tmp);
+		tmp++;
+	}
 	return (0);
 }

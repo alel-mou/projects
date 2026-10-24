@@ -50,9 +50,15 @@ static	void	ft_detect(char const *s1, char const *set, size_t *s, size_t *e)
 	*s = 0;
 	while (ft_isincharset(set, s1[*s]))
 		++*s;
+	if (!s1[*s])
+	{
+		*e = *s;
+		return;
+	}
 	*e = ft_strlen(s1) - 1;
 	while (ft_isincharset(set, s1[*e]))
 		--*e;
+
 }
 
 char	*ft_strtrim(char const *s1, char const *set)

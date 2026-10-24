@@ -53,12 +53,11 @@ static	void	ft_detect(char const *s1, char const *set, size_t *s, size_t *e)
 	if (!s1[*s])
 	{
 		*e = *s;
-		return;
+		return ;
 	}
 	*e = ft_strlen(s1) - 1;
 	while (ft_isincharset(set, s1[*e]))
 		--*e;
-
 }
 
 char	*ft_strtrim(char const *s1, char const *set)

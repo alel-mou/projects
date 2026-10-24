@@ -1,10 +1,9 @@
+#include <fcntl.h>
+#include <unistd.h>
 #include <stdio.h>
-#include <string.h>
-
-extern int	counter;
 
 int	main()
 {
-	printf("%d\n",counter);
+	write(2, "hello\0", 6);
 	return (0);
 }

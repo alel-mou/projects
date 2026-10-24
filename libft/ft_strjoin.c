@@ -14,35 +14,14 @@
 
 static char	*ft_handle(char const *s1, char const *s2)
 {
-	size_t	i;
 	char	*p;
 
 	if (!s1 && !s2)
 		return (NULL);
 	if (!s1)
-	{
-		p = malloc((ft_strlen(s2) + 1) * sizeof(char));
-		if (!p)
-			return (NULL);
-		i = 0;
-		while (s2[i])
-		{
-			p[i] = s2[i];
-			i++;
-		}
-	}
+		p = ft_strdup(s2);
 	if (!s2)
-	{
-		p = malloc((ft_strlen(s1) + 1) * sizeof(char));
-		if (!p)
-			return (NULL);
-		i = 0;
-		while (s1[i])
-		{
-			p[i] = s1[i];
-			i++;
-		}
-	}
+		p = ft_strdup(s1);
 	return (p);
 }
 

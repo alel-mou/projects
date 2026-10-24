@@ -6,7 +6,6 @@
 
 int	main()
 {
-	write(1, "Hello\n", 6);
-	write(2, "Error!!!\n", 9);
+	ft_putnbr_fd(-2147483648, 1);
 	return (0);
 }

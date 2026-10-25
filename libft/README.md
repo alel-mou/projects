@@ -17,17 +17,17 @@ Use a Unix-like environment (Linux, macOS, or WSL) with `make`, a C compiler ava
 From the repository root:
 
 ```sh
-make -C libft
+make
 ```
 
 The Makefile compiles with `-Wall -Wextra -Werror` and uses `ar rcs` to create `libft/libft.a`. All three parts of the library, including linked lists, are included in the default build.
 
 | Command | Purpose |
 | --- | --- |
-| `make -C libft` | Build the library. |
-| `make -C libft clean` | Remove object files. |
-| `make -C libft fclean` | Remove object files and the library. |
-| `make -C libft re` | Rebuild the library from scratch. |
+| `make` | Build the library. |
+| `make clean` | Remove object files. |
+| `make fclean` | Remove object files and the library. |
+| `make re` | Rebuild the library from scratch. |
 
 ### Using the library
 
@@ -52,7 +52,7 @@ int main(void)
 Compile and run it:
 
 ```sh
-cc -Wall -Wextra -Werror -I libft example.c libft/libft.a -o example
+cc -Wall -Wextra -Werror libft example.c libft/libft.a -o example
 ./example
 ```
 

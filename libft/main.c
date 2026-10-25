@@ -14,6 +14,11 @@ void	ft_printlst(t_list *lst)
 	printf("NULL\n");
 }
 
+void	f(void *content)
+{
+	int	*p = content;
+	*p *= 2;
+}
 int	main()
 {
 	int	x = 4;
@@ -30,8 +35,8 @@ int	main()
 	ft_lstadd_back(&lst, NULL);
 	ft_lstadd_back(&lst, node4);
 	ft_printlst(lst);
-	printf("%u\n", ft_lstsize(lst));
-	t_list	*last = ft_lstlast(lst);
-	printf("last : %d\n", *(int *)last->content);
+	printf("\n");
+	ft_lstiter(lst, f);
+	ft_printlst(lst);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: alel-mou <alel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 15:15:13 by alel-mou          #+#    #+#             */
-/*   Updated: 2026/10/24 17:38:31 by alel-mou         ###   ########.fr       */
+/*   Updated: 2026/10/25 01:06:08 by alel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*p;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	p = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!p)

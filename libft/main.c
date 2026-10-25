@@ -19,6 +19,12 @@ void	f(void *content)
 	int	*p = content;
 	*p *= 2;
 }
+
+void	del(void *node)
+{
+	free(node);
+}
+
 int	main()
 {
 	int	x = 4;

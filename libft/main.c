@@ -14,10 +14,11 @@ void	ft_printlst(t_list *lst)
 	printf("NULL\n");
 }
 
-void	f(void *content)
+void	*f(void *content)
 {
 	int	*p = content;
 	*p *= 2;
+	return (p);
 }
 
 void	del(void *node)
@@ -42,7 +43,10 @@ int	main()
 	ft_lstadd_back(&lst, node4);
 	ft_printlst(lst);
 	printf("\n");
-	ft_lstiter(lst, f);
+	t_list *newlst = ft_lstmap(lst, f, del);
+	printf("existing linked list : \n");
 	ft_printlst(lst);
+	printf("new linked list : \n");
+	ft_printlst(newlst);
 	return (0);
 }

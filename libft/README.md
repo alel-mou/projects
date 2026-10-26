@@ -108,7 +108,7 @@ Check allocation results before using them. Free allocated strings and buffers w
 ## Resources
 
 - **Libft subject, version 19.3** (`libftnew.pdf` supplied with this task): project specifications, function contracts, and README requirements.
-- **System manual pages**: consult `man 3 strlen`, `man 3 memcpy`, `man 3 memmove`, `man 3 malloc`, and `man 3 free` for function behavior and memory management; consult `man 2 write` for file-descriptor output. BSD manual pages cover `strlcpy`, `strlcat`, and `strnstr` where local manuals do not provide them.
+- **System manual pages**: consult `man  strlen`, `man  memcpy`, `man  memmove`, `man  malloc`, and `man free` for function behavior and memory management; consult `man  write` for file-descriptor output. BSD manual pages cover `strlcpy`, `strlcat`, and `strnstr` where local manuals do not provide them.
 - **GNU Make manual** and **GNU Binutils `ar` manual**: references for build rules and static archives.
 - **42 Norm**: the school's coding-style reference for C source and header files.
 

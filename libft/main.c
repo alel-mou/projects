@@ -2,9 +2,15 @@
 #include <stdio.h>
 #include <limits.h>
 #include <bsd/string.h>
+#include <string.h>
 
 int	main()
 {
-	printf("%d\n", ft_atoi("-9223372036854775807"));
+	char ptr[4];
+	ft_memset(ptr, 0x39, 1);
+	ft_memset(ptr + 1, 5, 1);
+	ft_memset(ptr + 2, 0, 1);
+	ft_memset(ptr + 3, 0, 1);
+	printf("%d\n", *(int *)ptr);
 	return (0);
 }

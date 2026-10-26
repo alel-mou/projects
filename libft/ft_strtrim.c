@@ -12,10 +12,12 @@
 
 #include "libft.h"
 
-static int	ft_isincharset(char const *set, char c)
+static int	ft_isincharset(char c, char const *set)
 {
 	size_t	i;
 
+	if (!set)
+		return (0);
 	i = 0;
 	while (set[i])
 	{
@@ -26,63 +28,38 @@ static int	ft_isincharset(char const *set, char c)
 	return (0);
 }
 
-static	char	*ft_handle(char const *s1)
+static char	*ft_allocate(char const *s1, int start, int end)
 {
 	char	*p;
-	size_t	i;
+	int		i;
 
-	if (!s1)
-		return (NULL);
-	p = malloc((ft_strlen(s1) + 1) * sizeof(char));
-	if (!p)
-		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		p[i] = s1[i];
-		i++;
-	}
-	return (p);
-}
-
-static	void	ft_detect(char const *s1, char const *set, size_t *s, size_t *e)
-{
-	*s = 0;
-	while (ft_isincharset(set, s1[*s]))
-		++*s;
-	if (!s1[*s])
-	{
-		*e = *s;
-		return ;
-	}
-	*e = ft_strlen(s1) - 1;
-	while (ft_isincharset(set, s1[*e]))
-		--*e;
-}
-
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	size_t	start;
-	size_t	end;
-	size_t	i;
-	size_t	n;
-	char	*p;
-
-	if (!s1 || !set)
-	{
-		return (ft_handle(s1));
-	}
-	ft_detect(s1, set, &start, &end);
 	p = malloc((end - start + 2) * sizeof(char));
 	if (!p)
 		return (NULL);
-	n = end - start + 1;
 	i = 0;
-	while (i < n)
+	while (start <= end)
 	{
 		p[i] = s1[start];
 		i++;
 		start++;
 	}
 	return (p);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	i;
+	size_t	end;
+
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
+	i = 0;
+	while (ft_isincharset(s1[i], set))
+		i++;
+	end = ft_strlen(s1) - 1;
+	while (ft_isincharset(s1[end], set))
+		end--;
+	return (ft_allocate(s1, i, end));
 }

@@ -6,7 +6,7 @@
 /*   By: alel-mou <alel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 20:12:53 by alel-mou          #+#    #+#             */
-/*   Updated: 2026/10/26 14:50:17 by alel-mou         ###   ########.fr       */
+/*   Updated: 2026/10/26 16:41:52 by alel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ static void	ft_scan(const char *nptr, int *i, int *sign)
 			*sign *= -1;
 		++*i;
 	}
-	while (nptr[*i] == '0')
-		++*i;
 }
 
 int	ft_atoi(const char *nptr)

@@ -6,13 +6,13 @@
 /*   By: alel-mou <alel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 20:12:53 by alel-mou          #+#    #+#             */
-/*   Updated: 2026/10/26 16:41:52 by alel-mou         ###   ########.fr       */
+/*   Updated: 2026/10/26 21:48:13 by alel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 static int	ft_isaspace(char c)
 {
-	return ((7 <= c && c <= 13) || c == ' ');
+	return ((9 <= c && c <= 13) || c == ' ');
 }
 
 static int	ft_isasign(char c)

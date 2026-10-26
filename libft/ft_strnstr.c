@@ -6,7 +6,7 @@
 /*   By: alel-mou <alel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 18:14:09 by alel-mou          #+#    #+#             */
-/*   Updated: 2026/10/21 19:53:39 by alel-mou         ###   ########.fr       */
+/*   Updated: 2026/10/26 22:56:14 by alel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 
+	if (!big)
+		return (NULL);
 	if (!*little)
 		return ((char *)big);
 	i = 0;
-	while (big[i] && i < len)
+	while (i < len && big[i])
 	{
 		if (ft_check(&big[i], little, len - i))
 			return ((char *)&big[i]);

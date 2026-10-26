@@ -40,8 +40,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (ft_isincharset(s1[i], set))
 		i++;
-	end = ft_strlen(s1) - 1;
-	while (ft_isincharset(s1[end], set))
+	end = ft_strlen(s1);
+	while (end > i && ft_isincharset(s1[end - 1], set))
 		end--;
-	return (ft_substr(s1, i, end - i + 1));
+	return (ft_substr(s1, i, end - i));
 }

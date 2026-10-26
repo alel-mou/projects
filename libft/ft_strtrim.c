@@ -28,24 +28,6 @@ static int	ft_isincharset(char c, char const *set)
 	return (0);
 }
 
-static char	*ft_allocate(char const *s1, int start, int end)
-{
-	char	*p;
-	int		i;
-
-	p = malloc((end - start + 2) * sizeof(char));
-	if (!p)
-		return (NULL);
-	i = 0;
-	while (start <= end)
-	{
-		p[i] = s1[start];
-		i++;
-		start++;
-	}
-	return (p);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
@@ -61,5 +43,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1) - 1;
 	while (ft_isincharset(s1[end], set))
 		end--;
-	return (ft_allocate(s1, i, end));
+	return (ft_substr(s1, i, end - i + 1));
 }

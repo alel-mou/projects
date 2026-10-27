@@ -6,7 +6,7 @@
 /*   By: alel-mou <alel-mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 18:48:39 by alel-mou          #+#    #+#             */
-/*   Updated: 2026/10/19 18:51:11 by alel-mou         ###   ########.fr       */
+/*   Updated: 2026/10/27 11:24:20 by alel-mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const char	*s;
 	size_t		i;
 
+	if (src == dest || n == 0)
+		return (dest);
 	d = dest;
 	s = src;
 	if (dest <= src)
-	{
-		i = 0;
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
+		ft_memcpy(dest, src, n);
 	else
 	{
 		i = n;
